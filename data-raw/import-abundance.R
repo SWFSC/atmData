@@ -34,21 +34,33 @@ rm(list = c("abund.summ", "abundance_1807RL"))
 
 ## 2019 data
 load(file.path(estimATM.dir, "1907RL/Output/abundance_table_all.Rdata"))
-abundance_1907RL <- abund.summ
+load(file.path(estimATM.dir, "1907RL/Output/abundance_table_all_ns.Rdata"))
+abund.summ    <- dplyr::mutate(abund.summ, Region = "Core") %>% dplyr::ungroup()
+abund.summ.ns <- dplyr::mutate(abund.summ.ns, Region = "Nearshore") %>% dplyr::ungroup()
+
+abundance_1907RL <- dplyr::bind_rows(abund.summ, abund.summ.ns)
 
 usethis::use_data(abundance_1907RL, overwrite = TRUE)
 rm(list = c("abund.summ", "abundance_1907RL"))
 
 ## 2021 data
 load(file.path(estimATM.dir, "2107RL/Output/abundance_table_all.Rdata"))
-abundance_2107RL <- abund.summ
+load(file.path(estimATM.dir, "2107RL/Output/abundance_table_all_ns.Rdata"))
+abund.summ    <- dplyr::mutate(abund.summ, Region = "Core") %>% dplyr::ungroup()
+abund.summ.ns <- dplyr::mutate(abund.summ.ns, Region = "Nearshore") %>% dplyr::ungroup()
+
+abundance_2107RL <- dplyr::bind_rows(abund.summ, abund.summ.ns)
 
 usethis::use_data(abundance_2107RL, overwrite = TRUE)
 rm(list = c("abund.summ", "abundance_2107RL"))
 
-## 2021 data
+## 2022 data
 load(file.path(estimATM.dir, "2207RL/Output/abundance_table_all.Rdata"))
-abundance_2207RL <- abund.summ
+load(file.path(estimATM.dir, "2207RL/Output/abundance_table_all_ns.Rdata"))
+abund.summ    <- dplyr::mutate(abund.summ, Region = "Core") %>% dplyr::ungroup()
+abund.summ.ns <- dplyr::mutate(abund.summ.ns, Region = "Nearshore") %>% dplyr::ungroup()
+
+abundance_2207RL <- dplyr::bind_rows(abund.summ, abund.summ.ns)
 
 usethis::use_data(abundance_2207RL, overwrite = TRUE)
 rm(list = c("abund.summ", "abundance_2207RL"))
