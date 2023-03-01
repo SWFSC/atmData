@@ -8,6 +8,10 @@ EstimateCPS.dir <- "C:/KLS/CODE/Github/EstimateCPS"
 load(file.path(estimATM.dir, "1507SH/Output/nasc_final.Rdata"))
 nasc_density_1507SH <- nasc
 
-
-
 usethis::use_data(nasc_density_1507SH, overwrite = TRUE)
+
+## 2016 data
+load(file.path(estimATM.dir, "1606RL/Output/nasc_final.Rdata"))
+nasc_density_1606RL <- nasc
+
+usethis::use_data(nasc_density_1606RL, overwrite = TRUE)
