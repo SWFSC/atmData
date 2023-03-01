@@ -13,6 +13,9 @@ Depends:
     R (>= 2.10)
 LazyData: true
 Imports: 
+    atm,
     dplyr,
     ggplot2,
     magrittr
+Remotes:
+   SWFSC/FRD-AST-atm
