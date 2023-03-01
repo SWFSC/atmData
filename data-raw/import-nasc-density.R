@@ -1,4 +1,4 @@
-## code to prepare `nasc-density` dataset
+## code to prepare `nasc_density_*` data sets
 
 ## specify root directory
 estimATM.dir <- "C:/KLS/CODE/Github/estimATM"
