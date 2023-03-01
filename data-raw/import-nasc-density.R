@@ -26,7 +26,7 @@ usethis::use_data(nasc_density_1707RL, overwrite = TRUE)
 rm(list = c("nasc", "nasc_density_1707RL"))
 
 ## 2018 data
-load(file.path(estimATM.dir, "1807RL/Output/nasc_final.Rdata"))
+load(file.path(EstimateCPS.dir, "1807RL/Output/nasc_final.Rdata"))
 nasc_density_1807RL <- nasc
 
 usethis::use_data(nasc_density_1807RL, overwrite = TRUE)
