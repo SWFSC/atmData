@@ -91,3 +91,35 @@ biomass_2207RL <- dplyr::bind_rows(be, be.ns)
 ## Save data and clean-up
 usethis::use_data(biomass_2207RL, overwrite = TRUE)
 rm(list = c("be", "be.ns", "biomass_2207RL"))
+
+## 2023 data --------------------------------------
+## Import data and define sampling regions
+load(file.path(estimATM.dir, "2307RL/Output/biomass_bootstrap_estimates_final.Rdata"))
+load(file.path(estimATM.dir, "2307RL/Output/biomass_bootstrap_estimates_final_ns.Rdata"))
+be    <- dplyr::ungroup(be) %>%
+  dplyr::mutate(Region = "Core")
+be.ns <- dplyr::ungroup(be.ns) %>%
+  dplyr::mutate(Region = "Nearshore")
+
+# Combine regions
+biomass_2307RL <- dplyr::bind_rows(be, be.ns)
+
+## Save data and clean-up
+usethis::use_data(biomass_2307RL, overwrite = TRUE)
+rm(list = c("be", "be.ns", "biomass_2307RL"))
+
+## 2024 data --------------------------------------
+## Import data and define sampling regions
+load(file.path(estimATM.dir, "2407RL/Output/biomass_bootstrap_estimates_final.Rdata"))
+load(file.path(estimATM.dir, "2407RL/Output/biomass_bootstrap_estimates_final_ns.Rdata"))
+be    <- dplyr::ungroup(be) %>%
+  dplyr::mutate(Region = "Core")
+be.ns <- dplyr::ungroup(be.ns) %>%
+  dplyr::mutate(Region = "Nearshore")
+
+# Combine regions
+biomass_2407RL <- dplyr::bind_rows(be, be.ns)
+
+## Save data and clean-up
+usethis::use_data(biomass_2407RL, overwrite = TRUE)
+rm(list = c("be", "be.ns", "biomass_2407RL"))

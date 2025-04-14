@@ -92,3 +92,35 @@ abundance_2207RL <- dplyr::bind_rows(abund.summ, abund.summ.ns)
 ## Save data and clean-up
 usethis::use_data(abundance_2207RL, overwrite = TRUE)
 rm(list = c("abund.summ", "abundance_2207RL"))
+
+## 2023 data --------------------------------------
+## Import data and define sampling regions
+load(file.path(estimATM.dir, "2307RL/Output/abundance_table_all.Rdata"))
+load(file.path(estimATM.dir, "2307RL/Output/abundance_table_all_ns.Rdata"))
+abund.summ    <-  dplyr::ungroup(abund.summ) %>%
+  dplyr::mutate(Region = "Core")
+abund.summ.ns <-  dplyr::ungroup(abund.summ.ns) %>%
+  dplyr::mutate(Region = "Nearshore")
+
+# Combine regions
+abundance_2307RL <- dplyr::bind_rows(abund.summ, abund.summ.ns)
+
+## Save data and clean-up
+usethis::use_data(abundance_2307RL, overwrite = TRUE)
+rm(list = c("abund.summ", "abund.summ.ns", "abundance_2407RL"))
+
+## 2024 data --------------------------------------
+## Import data and define sampling regions
+load(file.path(estimATM.dir, "2407RL/Output/abundance_table_all.Rdata"))
+load(file.path(estimATM.dir, "2407RL/Output/abundance_table_all_ns.Rdata"))
+abund.summ    <-  dplyr::ungroup(abund.summ) %>%
+  dplyr::mutate(Region = "Core")
+abund.summ.ns <-  dplyr::ungroup(abund.summ.ns) %>%
+  dplyr::mutate(Region = "Nearshore")
+
+# Combine regions
+abundance_2407RL <- dplyr::bind_rows(abund.summ, abund.summ.ns)
+
+## Save data and clean-up
+usethis::use_data(abundance_2407RL, overwrite = TRUE)
+rm(list = c("abund.summ", "abund.summ.ns", "abundance_2407RL"))
