@@ -1,6 +1,6 @@
-# atm-data
+# atmData
 
-A package containing results and other output from [estimATM](https://github.com/kstierhoff/estimATM) and other methods used to analyze data from acoustic-trawl-method (ATM) surveys conducted by NOAA's Southwest Fisheries Science Center.
+A package containing results and other output from [estimATM](https://github.com/SWFSC/estimATM) and other methods used to analyze data from acoustic-trawl-method (ATM) surveys conducted by NOAA's Southwest Fisheries Science Center.
 
 ## Maintainer
 Kevin Stierhoff (@kstierhoff)
