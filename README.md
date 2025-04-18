@@ -1,6 +1,6 @@
 # atmData
 
-A data package containing results and other outputs from [estimATM](https://github.com/SWFSC/estimATM) and other methods used to analyze data from acoustic-trawl-method (ATM) surveys conducted by NOAA's Southwest Fisheries Science Center. These data contribute to or are contained in NOAA Technical Memoranda that describe the collection of data [for example](https://doi.org/10.25923/58w7-y586) or the distributions, biomasses, and demographics of coastal pelagic fish species (CPS) in the California Current Ecosystem [for example](https://doi.org/10.25923/v99f-me72).
+A data package containing results and other outputs from [estimATM](https://github.com/SWFSC/estimATM) and other methods used to analyze data from acoustic-trawl-method (ATM) surveys conducted by NOAA's Southwest Fisheries Science Center. These data contribute to or are contained in NOAA Technical Memoranda that describe the collection of data ([for example](https://doi.org/10.25923/58w7-y586)) or the distributions, biomasses, and demographics of coastal pelagic fish species (CPS) in the California Current Ecosystem ([for example](https://doi.org/10.25923/v99f-me72)).
 
 ## Maintainer
 Kevin Stierhoff (@kstierhoff)
