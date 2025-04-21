@@ -7,7 +7,7 @@ Kevin Stierhoff (@kstierhoff)
 
 ## Installation
 
-You can install or update {atm} from [GitHub](https://github.com/SWFSC/atmData) with:
+You can install or update {atmData} from [GitHub](https://github.com/SWFSC/atmData) with:
 
 ``` r
 # install.packages("devtools")
