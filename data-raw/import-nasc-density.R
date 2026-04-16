@@ -109,3 +109,17 @@ nasc_density_2407RL <- dplyr::bind_rows(nasc, nasc.ns)
 ## Save data and clean-up
 usethis::use_data(nasc_density_2407RL, overwrite = TRUE)
 rm(list = c("nasc", "nasc.ns", "nasc_density_2407RL"))
+
+## 2025 data
+## Import data and define sampling regions
+load(file.path(estimATM.dir, "2506SH/Output/nasc_final.Rdata"))
+load(file.path(estimATM.dir, "2506SH/Output/nasc_nearshore_final.Rdata"))
+nasc <- nasc %>% dplyr::mutate(Region = "Core")
+nasc.ns <- nasc.nearshore %>% dplyr::mutate(Region = "Nearshore")
+
+# Combine regions
+nasc_density_2506SH <- dplyr::bind_rows(nasc, nasc.ns)
+
+## Save data and clean-up
+usethis::use_data(nasc_density_2506SH, overwrite = TRUE)
+rm(list = c("nasc", "nasc.ns", "nasc_density_2506SH"))
