@@ -1,3 +1,5 @@
 ^ast-data\.Rproj$
 ^\.Rproj\.user$
 ^data-raw$
+^\.positai$
+^\.claude$
